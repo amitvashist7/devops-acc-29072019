@@ -93,3 +93,84 @@
   156  cd docker/
   157  ls
   158  history > docker_hist.txt
+  159  vim docker_hist.txt 
+  160  vi docker_hist.txt 
+  161  ls
+  162  cd ..
+  163  s
+  164  ls
+  165  git pull 
+  166  git add . ; git commit -m "Docker Hist"; git push origin master 
+  167  ls
+  168  cd 
+  169  ls
+  170  docker run -it ubuntu:16.04 
+  171  docker ps -ql
+  172  docker inspect $(docker ps -ql)
+  173  curl 172.17.0.3
+  174  curl localhost
+  175  docker attach $(docker ps -ql)
+  176  curl 172.17.0.3
+  177  curl 172.17.0.3/info.html
+  178  docker attach $(docker ps -ql)
+  179  curl 172.17.0.3/info.html
+  180  docker ps 
+  181  docker ps -ql
+  182  docker commit -p -m "My First Apache Container Image" 12c186edac4f ubuntu-myapache:v1
+  183  docker images
+  184  curl 172.17.0.3/info.html
+  185  docker ps -ql
+  186  docker run -itd ubuntu-myapache:v1 /bin/bash
+  187  docker ps 
+  188  curl 172.17.0.4/info.html
+  189  docker inspect 2bf0d34f70be 
+  190  docker run -itd --name apache-01 ubuntu-myapache:v1 /bin/bash
+  191  docker run -itd --name apache-02 ubuntu-myapache:v1 /bin/bash
+  192  docker run -itd --name apache-03 ubuntu-myapache:v1 /bin/bash
+  193  curl 172.17.0.5/info.html
+  194  curl 172.17.0.6/info.html
+  195  curl 172.17.0.7/info.html
+  196  curl 172.17.0.6/info.html
+  197  docker ps 
+  198  docker inspect apache-01
+  199  curl 172.17.0.5/info.html
+  200  docker inspect apache-02
+  201  curl 172.17.0.12/info.html
+  202  docker inspect apache-03
+  203  curl 172.17.0.13/info.html
+  204  docker run -it --name test-update ubuntu-myapache:v1 /bin/bash
+  205  docker inspect test-update
+  206  curl "172.17.0.14"
+  207  curl 172.17.0.14/info.html
+  208  docker commit -p -m "My First Apache Container Image" test-update ubuntu-myapache:v2
+  209  docker images 
+  210  docker run -itd --name apache-v2-01 ubuntu-myapache:v2 /bin/bash
+  211  docker run -itd --name apache-v2-02 ubuntu-myapache:v2 /bin/bash
+  212  docker inspect apache-v2-01
+  213  curl 172.17.0.15/info.html
+  214  curl 172.17.0.16/info.html
+  215  ip addr 
+  216  yum install net-tools -y 
+  217  netstat -tulnp
+  218  iptables -L
+  219  docker run -itd --name apache-v2-03 -p 38080:80 ubuntu-myapache:v2 /bin/bash
+  220  netstat -tulnp
+  221  curl localhost
+  222  curl localhost:38080
+  223  curl localhost:38080/info.html
+  224  iptables -L
+  225  docker run -itd --name apache-v2-04 -p 38081:80 ubuntu-myapache:v2 /bin/bash
+  226  docker ps 
+  227  iptables -L
+  228  history 
+  229  ls
+  230  docker ps 
+  231  docker exec apache-v2-04 ps -ef 
+  232  docker exec apache-v2-04 apache2ctl --version
+  233  docker exec apache-v2-04 apache2ctl -v
+  234  ls
+  235  cd devops-acc-29072019/
+  236  ls
+  237  cd docker/
+  238  ls
+  239  history > docker_hist.txt 

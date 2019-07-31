@@ -174,3 +174,115 @@
   237  cd docker/
   238  ls
   239  history > docker_hist.txt 
+  240  vi docker_hist.txt 
+  241  ls
+  242  git add . ; git commit -m "Docker Hist-2"; git push origin master 
+  243  ls
+  244  cd ..
+  245  ls
+  246  cd docker/
+  247  ls
+  248  mkdir dockerfiles/apache -p 
+  249  ls
+  250  cd dockerfiles/apache/
+  251  ls
+  252  vim Dockerfile
+  253  vi Dockerfile
+  254  ls
+  255  cat Dockerfile 
+  256  docker kill $(docker ps -qa)
+  257  docker rm  $(docker ps -qa)
+  258  ls
+  259  docker images
+  260  docker build -t "amitvashist7/myapache-acc:v1" .
+  261  docker images
+  262  docker run -d --name apache-01 -p 38081:80 amitvashist7/myapache-acc:v1 
+  263  vi Dockerfile 
+  264  docker build -t "amitvashist7/myapache-acc:v1" .
+  265  docker run -d --name apache-02 -p 38081:80 amitvashist7/myapache-acc:v1 
+  266  docker ps 
+  267  docker ps -a
+  268  docker ps 
+  269  ls
+  270  vi amit.abc
+  271  vim Dockerfile 
+  272  vi Dockerfile 
+  273  docker build -t "amitvashist7/myapache-acc:v2" .
+  274  docker run -d --name apache-03 -p 38083:80 amitvashist7/myapache-acc:v2
+  275  ls
+  276  cat Dockerfile 
+  277  ls
+  278  cat /etc/redhat-release 
+  279  cp -rf /etc/redhat-release release
+  280  ls
+  281  ls -ltr 
+  282  ls
+  283  rm -rf 
+  284  cat /etc/redhat-release 
+  285  cat /etc/redhat-release  > release
+  286  ls
+  287  ls -ltr 
+  288  ls
+  289  rm -rf release 
+  290  ls
+  291  ll
+  292  cat centos-release 
+  293  ls
+  294  vi Dockerfile 
+  295  docker build -t "amitvashist7/myapache-acc:v3" .
+  296  docker run -d --name apache-04 -p 38084:80 amitvashist7/myapache-acc:v3
+  297  docker images 
+  298  history 
+  299  cat Dockerfile 
+  300  ls
+  301  docker images
+  302  docker run -d --name apache-05 amitvashist7/myapache-acc:v3
+  303  docker ps 
+  304  ls
+  305  cd ..
+  306  ls
+  307   ..
+  308  ls
+  309  docker login 
+  310  ls
+  311  docker images 
+  312  docker push amitvashist7/myapache-acc:v1
+  313  docker push amitvashist7/myapache-acc:v2
+  314  docker push amitvashist7/myapache-acc:v3
+  315  ls
+  316  docker ps 
+  317  docker images
+  318  docker tag amitvashist7/myapache-acc:v3 amitvashist7/myapache-acc:latest
+  319  docker images
+  320  docker push amitvashist7/myapache-acc:latest
+  321  docker kill $(docker ps -aq)
+  322  docker rm $(docker ps -aq)
+  323  ls
+  324  docker images
+  325  docker images | awk -F" " '{print $3}'
+  326  docker images | awk -F" " '{print $3}'| grep -v IMAGE
+  327  docker rmi $(docker images | awk -F" " '{print $3}'| grep -v IMAGE)
+  328  ls
+  329  docker images
+  330  docker ps -a 
+  331  docker rmi amitvashist7/myapache-acc:latest
+  332  docker rmi amitvashist7/myapache-acc:v3
+  333  docker images
+  334  docker rmi ubuntu:16.04
+  335  ls
+  336  docker images 
+  337  docker ps -a 
+  338  docker version 
+  339  docker logut 
+  340  docker logout 
+  341  docker run -d --name test-01 -p 38089:80 amitvashist7/myapache-acc
+  342  ls
+  343  docker images 
+  344  docker ps 
+  345  docker pull amitvashist7/apache-ex4
+  346  docker login 
+  347  docker pull amitvashist7/apache-ex4
+  348  ls
+  349  cd ..
+  350  ls
+  351  history > docker_hist.txt 

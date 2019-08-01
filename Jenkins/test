@@ -17,12 +17,15 @@ stage('CheckOut Repo') {
  stage('Build Atmosphere Package') {
    sh label: '', script: 'mvn package'
  }
+
+ stage('Stage Deployment in Docker Env.') {
+   sh label: '', script: 'docker-compose up -d --build'
+} 
+
  }
  stage('Archive my Artifacts') {
  archiveArtifacts "${Project_Path}/target/*.jar"
  }
 
- stage('Stage Deployment in Docker Env.') {
-   sh label: '', script: 'docker-compose up -d --build'
-} 
+
 }

@@ -1,0 +1,8 @@
+version: '2'
+
+services:
+  myatmosphere:
+    build: . 
+    ports:
+      - '9092:8080'
+  

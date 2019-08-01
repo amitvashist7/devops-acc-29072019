@@ -1,6 +1,8 @@
 node {
 
 notify('Job has been Initated')
+
+try {
     
 stage('CheckOut Repo') {    
    git 'https://github.com/amitvashist7/devops-acc-29072019.git'
@@ -30,6 +32,10 @@ stage('CheckOut Repo') {
  }
 
 notify ('Job has been completed')
+} catch (err) {
+  notify("Error ${err}")
+  currentBuild.result = 'FAILURE'
+}
 }
 
 

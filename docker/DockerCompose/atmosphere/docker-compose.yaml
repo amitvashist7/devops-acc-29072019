@@ -4,5 +4,5 @@ services:
   myatmosphere:
     build: . 
     ports:
-      - '9092:8080'
+      - '38080:8080'
   

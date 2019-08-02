@@ -2,8 +2,6 @@
 
 - hosts: web
   become: yes
-
-
   tasks:
   - name: Install Apache Packages
     yum: name=httpd state=present
@@ -15,8 +13,6 @@
 
 - hosts: dc
   become: yes
-
-
   tasks:
   - name: Stop the firewall
     service: name=firewalld state=stopped

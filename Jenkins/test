@@ -29,7 +29,7 @@ stage('CheckOut Repo') {
 
  
  stage('Getting Ready for Ansible Deployment') {
-   sh label: '', script: 'cp -rf target/spring-boot-sample-atmosphere-1.4.0.BUILD-SNAPSHOT.jar ../../../ansible/demo07/playbooks/roles/webserver/templates/'
+   sh label: '', script: 'cp -rf target/spring-boot-sample-atmosphere-1.4.0.BUILD-SNAPSHOT.jar ../../../ansible/demo07/playbooks/roles/webserver/templates/atmosphere.jar'
 }
 
  
